@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+body{
+    background: hsl(13, 31%, 94%);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    max-width: 70rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.container-produtos{
+    padding: 1rem 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-produtos h2{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 650px;
+}
+
+.produto-item{
+    flex: 1 1 12rem;
+    margin-top: 1rem;
+}
+.image{
+    width: 100%;
+}
+.image .image-central{
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.botao{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border: 1px solid hsl(12, 20%, 44%);
+    background-color: #fff;
+    outline: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    padding: .4rem 1rem;
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: #ecdada;
+}
+.info-produto{
+    margin-top: 1rem;
+}
+
+.info-produto p{
+    font-size: .8rem;
+    color: #c0bdbd;
+}
+.info-produto h3{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: .8rem;
+}
+
+.info-produto h2{
+    font-size: 1rem;
+    color: #c73a0f;
+}
+
+/********Estilo do Carrinho***************/
+.carrinho{
+    background: #fff;
+    width: 300px;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.carrinho h2{
+    font-size: 1rem;
+    color:#c73a0f;
+    margin-bottom: 1rem;
+}
+
+.carrinho .foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto img{
+    width: 8rem;   
+}
+
+.carrinho p{
+    color: #87635a;
+    font-size: .8rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.footer-carrinho{
+    margin-top: 1rem;
+    display: none;
+}
+
+.total-cart{
+    display: flex;
+    justify-content: space-between;
+}
+.total-cart h2{
+    font-size: .8rem;
+    color: #3a3535;
+}
+.total-cart h1{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.delive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: .5rem;
+    padding: .5rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    background: rgba(135, 99, 90, 0.5);
+}
+.delive p{
+    color: #000;
+    font-size: .7rem;
+}
+.delive p span{
+    font-weight: bolder;
+}
+
+
+/*************** Modal **************/
+.cart-modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.modal{
+    min-width: 550px;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 2.5rem;
+}
+
+.header-modal h2{
+    font-size: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: bolder;
+}
+
+.header-modal p{
+    font-size: .7rem;
+    color: #6b4343;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.items-modal, .items-carrinho{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    flex-direction: column;
+}
+
+.modal-confirma{
+    background-color: rgba(135, 99, 90, 0.5);
+    padding: 1.5rem 1rem;
+    border-radius: .4rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.total-modal-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+.total-modal-info h2{
+    font-size: .8rem;
+    color: #3a3535;
+    font-weight: unset;
+}
+.total-modal-info h1{
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    font-weight: bold;
+}
+.botao-modal{
+    width: 100%;
+    height: 2.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #c73a0f;
+}
+
+/************* estilos para javaScript ****************/
+.elemento-carrinho, .elemento-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+.elemento{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(214, 209, 209);
+}
+.modal-elem{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(214, 209, 209);
+    margin-bottom: 1rem;
+}
+.produto-cart{
+    display: flex;
+    flex-direction: column;
+}
+.nome-prod{
+    color: #000;
+    font-weight: bolder;
+    font-size: .9rem;
+}
+.preco-quant{
+    display: flex;
+    margin-top: -14px;
+}
+.preco-quant p{
+    color: #c0bdbd;
+    font-size: .8rem;
+}
+p.quant{
+    color: #c73a0f;
+    margin-right: 1rem;
+}
+p.totPrecoProd{
+    color: #615f5f;
+    margin-left: 1rem;
+    font-size: .8rem;
+}
+.remove-from-cart-btn{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid hsl(12, 20%, 44%);
+    cursor: pointer;
+}
+
+/*estilo do javascrpt modal*/
+.produto-cart-modal{
+    display: flex;
+    gap: 1rem;
+}
+.img-modal{
+    width: 50px;
+    height: 20px;
+}
+.img-modal img{
+    width: 100%;
+    border-radius: .5rem;
+}
+.produto-info{
+    display: flex;
+    flex-direction: column;
+}
+.preco-quant-modal{
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    align-items: center;
+    gap: 1rem;
+}
+.nome-prod-modal{
+    font-size: .8rem;
+    font-weight: bolder;
+}
+.preco-quant-modal p{
+    color: #535050;
+    font-size: .9rem;
+}
+p.quant-modal{
+    color: #c73a0f;
+    font-size: 1rem;
+}
+.totPrecoProd-modal{
+    font-size: 1rem;
+    font-weight: unset;
+    color: #000;
+}
+
+
+footer{
+    background-color: #3a3535;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+
+/*Media Queres*/
+
+@media(max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+    .carrinho{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .modal{
+        min-width: 90%;
+        padding: 1rem;
+    }
+}
