@@ -181,6 +181,8 @@ body{
     background-color: #fff;
     border-radius: .5rem;
     padding: 2.5rem;
+    max-height: 95%;
+    overflow-y: auto;
 }
 
 .header-modal h2{
