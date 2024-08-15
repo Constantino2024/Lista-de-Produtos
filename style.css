@@ -176,6 +176,18 @@ body{
     z-index: 99;
 }
 
+/*Animação no modal*/
+@keyframes animar{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -70px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .modal{
     min-width: 550px;
     background-color: #fff;
@@ -183,6 +195,7 @@ body{
     padding: 2.5rem;
     max-height: 95%;
     overflow-y: auto;
+    animation: animar 0.5s;
 }
 
 .header-modal h2{
@@ -228,6 +241,7 @@ body{
     color: #0f0f0f;
     font-weight: bold;
 }
+
 .botao-modal{
     width: 100%;
     height: 2.5rem;
@@ -239,6 +253,7 @@ body{
     cursor: pointer;
     background-color: #c73a0f;
 }
+
 
 /************* estilos para javaScript ****************/
 .elemento-carrinho, .elemento-modal{
