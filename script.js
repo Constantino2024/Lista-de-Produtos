@@ -131,7 +131,7 @@ cartModal.addEventListener("click", function (event) {
   }
 });
 btnFechar.addEventListener("click", function (event) {
-    cartModal.style.display = "none";
+  cartModal.style.display = "none";
 });
 
 //Actualização do Modal
